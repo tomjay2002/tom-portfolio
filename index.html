@@ -7,17 +7,19 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="header">
+    <div id="header">
         <div class="container">
             <nav>
-                <h1 class="logo"><span><big>L</big></span>OGO</h1>
-                <UL>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </UL>
+                <h1 class="LOGO"><span><big>T</big></span>homas</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contacts</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="onpenmenu()"></i>
             </nav>
             <div class="header-text">
                 <p><b>Web Designer</b></p>
@@ -26,14 +28,14 @@
         </div>
     </div>
      
-    <div class="about">
-        <div id="container">
+    <div id="about">
+        <div class="container">
             <div class="row">
             <div class="about-col-1">
-                <img src="images/TomJay2.jpg" alt="">
+                <img src="images/background-b.jpeg" alt="">
             </div>
             <div class="about-col-2">
-                <h1 class="text-me">About Me</h1>
+                <h1 class="sub-title">About Me</h1>
                 <p class="bio">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima incidunt doloribus, tempora nesciunt quae voluptates eos facilis voluptas molestiae, saepe nisi explicabo. Ut, blanditiis expedita. Suscipit quasi in excepturi possimus!
             </p>
@@ -44,6 +46,7 @@
                 <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
             <div class="tab-contents active-tab" id="skills">
+                 <h3 class="tab-h3"><i>Skills</i></h3>
                 <ul>
                     <li><span>UI/UX</span><br>Designing Web Apps</li>
                     <li><span>Web Development</span><br>Web Apps Development</li>
@@ -52,14 +55,17 @@
                 </ul>
                 </div>
                 <div class="tab-contents" id="experience">
+                    <h3 class="tab-h3"><i>Experience</i></h3>
                  <ul>
+                   
                     <li><span>2000-2006</span><br>Accounts Officer,<br>National Petroleum,<br> Sierra Leone Ltd.</li>
-                    <li><span>2006 To current Date<br>Treasury Management Officer,<br>National Social Security and In Surance Trust,<br>Sierra Leone.</span><br></li>
+                    <li><span>2006 To current Date</span><br>Treasury Management Officer,<br>National Social Security and In Surance Trust,<br>Sierra Leone.<br></li>
                     <li><span>2019 To Date</span><br>Web Designing.</li>
 
                 </ul>
                 </div>
                 <div class="tab-contents" id="education">
+                     <h3 class="tab-h3"><i>Education</i></h3>
                  <ul>
                     <li><span>2017</span><br>Certificate in Treasury MAnagement,<br>African Training Institue,<br>Pretoria South Africa.</li>
 
@@ -141,7 +147,7 @@
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
                     <p> <i class="fa-regular fa-paper-plane"></i>jayjaytom2002@yahoo.co.uk</p>
-                    <p><i class="fa-solid fa-phone"></i>+232 77 620650</p>
+                    <p><i class="fa-solid fa-phone"></i>+23276449000</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
@@ -149,15 +155,20 @@
                         
                         <a href="jayjaytom2002"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
-                    <a href="documents/cv.pdf" download class="btn btn2">Download CV</a>
+                    <a href="documents/cv.pdf" download class="btn btn2">Download CV <i class="fa-solid fa-download"></i></a> 
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your name" required>
-                        <input type="email" name="Your Email" placeholder="pay123@numbada.com" required>
+                        <input type="email" name="Email" placeholder="pay123@numbada.com" required>
                         <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
                         <button tupe="submit" class="btn btn2 btn3">Submit</button>
                     </form>
+
+      <!-------------the form is submitted-------->
+                    <span id="msg"></span>
+
+                    <!--------the form is submitted-->
                 </div>
             </div>
         </div>
@@ -180,5 +191,37 @@
             document.getElementById(tabname).classList.add("active-tab");
          }
     </script>
+<!-------------sidemenu------------>
+
+
+<script>
+var sidemenu = document.getElementById("sidemenu");
+
+function onpenmenu(){
+    sidemenu.style.right = "0";
+}
+
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbynmbuHpHOqtACg9Cm5Civj9W6OaPA2HmZ75oxZTONQB3Zna42RYvVHSqcOFlKqIoO7sw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
