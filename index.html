@@ -17,6 +17,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contacts</a></li>
+                    <li><a href="#back">LogIn</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="onpenmenu()"></i>
@@ -146,11 +147,11 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p> <i class="fa-regular fa-paper-plane"></i>jayjaytom2002@yahoo.co.uk</p>
+                    <p> <i class="fa-regular fa-paper-plane"></i>jayjaytom2005@gmail.com</p>
                     <p><i class="fa-solid fa-phone"></i>+23276449000</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/"><span></span><i class="fa-brands fa-youtube"></i></span></a>
                         <a href="@Thomasjaykanu36153"><i class="fa-brands fa-twitter"></i></a>
                         
                         <a href="jayjaytom2002"><i class="fa-brands fa-tiktok"></i></a>
@@ -160,10 +161,15 @@
                 <div class="contact-right">
                     <form  action="https://formspree.io/f/mleyrybd"
                          method="POST">
-                        <input type="text" name="Name" id="name" placeholder="Your name" required>
-                        <input type="email" name="Email" id="email" placeholder="pay123@numbada.com" required>
+                         <p>Name:</p>
+                         <input type="text" name="Name" id="email" placeholder="Your full name" required>
+                         <p>Email:</p>
+                         <input type="email" name="Email" id="email" placeholder="pay123@numbada.com" required>
+                         <p>Telephone No.(Optional):</p>
+                         <input type="number" name="Phone Number (Optional)" id="number" placeholder="eg. +232 7644..." >
+                         <p>Message:</p>
                         <textarea name="Message"  rows="6" id="message" placeholder="Your Message"></textarea>
-                        <button tupe="submit" class="btn btn2 btn3">Submit</button>
+                        <button type="submit" class="btn btn2 btn3">Submit</button>
                     </form>
 
       <!-------------the form is submitted-------->
@@ -173,7 +179,34 @@
                 </div>
             </div>
         </div>
+    
     </div>
+            <!-- ---------------login form--------- -->
+    <div id="back">
+        <div class="box">
+            <form action="">
+                <h2>Sign In</h2>
+                  <div class="inputBox">
+                    <input type="text" required>
+                    <span>Username</span>
+                    <i></i>
+                  </div>
+                <div class="inputBox">
+                    <input type="password" required>
+                    <span>Enter Password</span>
+                    <i></i>
+                  </div>
+                <input type="submit" value="Login">
+                <div class="links">
+                    
+                    <a href="#">Forgot Password?</a>
+                    <a href="#">SignUp</a>
+                </div>
+             </form>
+        </div>
+        
+    </div>
+    
 <div class="copyright">
     <p>Copyright Thomas. Made with <i class="fa-solid fa-heart"></i> by Jays Coding</p>
 </div>
