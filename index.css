@@ -454,7 +454,7 @@ transform: translatey(-18px);
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: #1e1111;
+            background: #1e1122;
         }
 
         .box{
@@ -705,5 +705,10 @@ transform: translatey(-18px);
             margin-top: -40px;
             display: block;
             
+        }
+        #submit{
+            height: 12px;
+            width: 14px;
+            border: 1px solid #009900;
         }
         
